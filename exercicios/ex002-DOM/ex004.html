@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+
+        body.dark{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="cx1" id="cx1"> + <input type="number" name="cx2" id="cx2"> <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado: </div>
+
+
+    <input type="button" value="Trocar Tema" onclick="trocartema()">
+    <script>
+        function somar(){
+            var cn1 = document.querySelector('input#cx1')
+            var cn2 = document.querySelector('input#cx2')
+            var res = document.querySelector('div#res')
+            var n1 = Number(cn1.value)
+            var n2 = Number(cn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é ${s}`
+        }
+
+        function trocartema(){
+            var corpo = document.body
+            corpo.classList.toggle('dark')
+        }
+    </script>
+</body>
+</html>

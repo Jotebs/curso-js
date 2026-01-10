@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade pra burro</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <div id="res"></div>
+
+    <script>
+        function nacionalidade(){
+            var txtpais = document.querySelector('input#txtpais')
+            var pais = txtpais.value;
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Você é do(a) ${pais}</p>`
+            if (pais == 'Brasil') {
+                res.innerHTML += '<p>Voce é Brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Voce é Estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
