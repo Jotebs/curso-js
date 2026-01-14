@@ -22,7 +22,8 @@ function adicionar() {
         }else{
             let item = document.createElement('option') //se não existir, prossegue com a criação do item
             item.text = task.value
-            todo.appendChild(item)            
+            todo.appendChild(item)
+            text.innerHTML = '' //limpa a mensagem de tarefa existente        
         }
 
     }
