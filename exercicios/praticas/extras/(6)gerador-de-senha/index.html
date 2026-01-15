@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerador de senhas</h1>
+    </header>
+    <section>
+        <div>
+            <p>Digite o tamanho da senha desejada:</p>
+            <input type="number" id="tamanho" name="tamanho" min="1" max="100">
+            <p>Aperte o botão para gerar uma senha aleatória:</p>
+            <input type="button" value="Gerar Senha" onclick="gerarSenha()">
+        </div>
+
+
+        <div id="res"></div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
