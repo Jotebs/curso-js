@@ -1,29 +1,29 @@
-let display = document.querySelector('.display')
+let display = document.querySelector('.display') //variavel que recebe o display
 
-let numeroAtual = "";
-let numeroAnterior = null;
-let operadorAtual = null;
+let numeroAtual = ""; //variavel que armazena o numero
+let numeroAnterior = null; //variavel que armazena o numero anterior
+let operadorAtual = null; //variavel que armazena o operador
 
 function addNumber(n){
-    numeroAtual += n;
+    numeroAtual += n; //adiciona o numero ao numero atual
     display.innerText = numeroAtual;
 }
 
 function setOperador(op){
-    if(numeroAtual == "") return;
-    if(operadorAtual !== null) return;
-    numeroAnterior = Number(numeroAtual);
+    if(numeroAtual == "") return; //verifica se o numero atual está vazio
+    if(operadorAtual !== null) return; //verifica se o operador atual é nulo
+    numeroAnterior = Number(numeroAtual); //o numero anterior recebe o valor do numero atual
     operadorAtual = op;
-    numeroAtual = "";
-    display.innerText += operadorAtual;
+    numeroAtual = ""; //limpa o numero atual
+    display.innerText += operadorAtual; //mostra o operador no display
 }
 
 function calcular(){
-    if(numeroAtual === "" || operadorAtual === null) return;
-    let atual = Number(numeroAtual);
-    let resultado;
+    if(numeroAtual === "" || operadorAtual === null) return; //verifica se o numero atual ou o operador atual é nulo
+    let atual = Number(numeroAtual); //o atual recebe o valor do numero atual
+    let resultado; //variavel que armazena o resultado
 
-    switch(operadorAtual){
+    switch(operadorAtual){ //criei um switch case para cada operador
         case "+":
             resultado = numeroAnterior + atual;
             break;
@@ -37,13 +37,13 @@ function calcular(){
             resultado = numeroAnterior / atual;
             break;
     }
-    display.innerText = resultado;
-    numeroAnterior = null;
-    operadorAtual = null;
-    numeroAtual = String(resultado);
+    display.innerText = resultado; //mostra o resultado no display
+    numeroAnterior = null; //limpa o numero anterior
+    operadorAtual = null; //limpa o operador atual
+    numeroAtual = String(resultado); //o numero atual recebe o valor do resultado
 }
 
-function limpar(){
+function limpar(){ //limpa o display e todos os valores inseridos
     numeroAtual = "";
     numeroAnterior = null;
     operadorAtual = null;
