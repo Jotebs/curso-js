@@ -59,3 +59,8 @@ function limpar(){
     display.innerText = "";
     ponto = null;
 }
+
+function apagar(){
+    numeroAtual = numeroAtual.slice(0, -1); //remove o ultimo caracter do numero atual
+    display.innerText = numeroAtual;
+}
