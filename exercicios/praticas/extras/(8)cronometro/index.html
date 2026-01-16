@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cronômetro</h1>
+    </header>
+    <section>
+        <div>
+            <p>Aperte o botão para iniciar o cronômetro:</p>
+            <input type="button" value="Iniciar" onclick="contar()">
+            <input type="button" value="Parar" onclick="pause()">
+            <input type="button" value="zerar" onclick="reset()">
+        </div>
+
+
+        <div id="res"></div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
