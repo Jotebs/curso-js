@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo de Adivinhação</h1>
+    </header>
+    <section>
+        <div>
+            <p>Digite um número entre 1 e 100 e aperte em Iniciar:</p>
+            <input type="number" name="numero" id="numero" min="1" max="100">
+            <input type="button" value="Iniciar" id="inicio" onclick="iniciar()">
+            <p><input type="button" value="Reiniciar" onclick="reiniciar()"></p>
+        </div>
+
+
+        <div id="res"></div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
