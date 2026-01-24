@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de juros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora de juros</h1>
+
+    <form>
+        <label for="capital">Capital inicial:</label>
+        <input type="number" name="capital" id="capital">
+
+        <label for="juros">Taxa de juros(%/ano):</label>
+        <input type="number" name="juros" id="juros">
+
+        <label for="anos">Anos:</label>
+        <input type="number" name="anos" id="anos">
+
+        <button type="button" onclick="calcular()">Calcular</button>
+
+        <p id="resultado">Total: <span id="total">R$0,00</span></p>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
