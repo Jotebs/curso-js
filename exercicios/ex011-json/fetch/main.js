@@ -1,4 +1,3 @@
-buscarPokemon();
 
 async function buscarPokemon(){ 
 
@@ -18,7 +17,7 @@ async function buscarPokemon(){
         img.style.display = "block"; // torna a imagem visível
     }
     catch(erro){
-        console.error(error); // loga o erro no console
+        console.error(erro); // loga o erro no console
         alert("Pokémon não encontrado. Verifique o nome e tente novamente."); // alerta o usuário sobre o erro
     }
 }
